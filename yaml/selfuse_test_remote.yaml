@@ -309,6 +309,10 @@ rules:
   - RULE-SET,lan_non_ip,DIRECT
   - DOMAIN,linux.do,DIRECT
   - DOMAIN-SUFFIX,813.pp.ua,DIRECT
+  - DOMAIN-SUFFIX,e-hentai.org,节点选择
+  - DOMAIN-SUFFIX,exhentai.org,节点选择
+  - DOMAIN-SUFFIX,ehgt.org,节点选择
+  - DOMAIN-SUFFIX,hath.network,节点选择
 
   ### IP 类规则
   - RULE-SET,reject_ip,REJECT
