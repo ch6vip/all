@@ -308,6 +308,7 @@ rules:
   - RULE-SET,direct_non_ip,DIRECT
   - RULE-SET,lan_non_ip,DIRECT
   - DOMAIN,linux.do,DIRECT
+  - DOMAIN-SUFFIX,813.pp.ua,DIRECT
 
   ### IP 类规则
   - RULE-SET,reject_ip,REJECT
