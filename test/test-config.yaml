@@ -53,7 +53,7 @@ sniffer:
 
 ### Tunnel配置
 tun:
-  enable: false
+  enable: true
   stack: system
   device: Ethernet 99
   auto-route: true
@@ -101,7 +101,6 @@ proxy-groups:
   - {name: 电报信息, type: select, proxies: [节点选择, 手动选择], icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Telegram.png}
   - {name: 人工智能, type: select, proxies: [狮城节点, 节点选择, 自动选择, 手动选择, 中继选择, 落地选择, 香港节点, 日本节点, 韩国节点, 美国节点, 英国节点, 法国节点, 德国节点, 台湾节点], icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/OpenAI.png}
   - {name: 苹果服务, type: select, proxies: [DIRECT, 节点选择, 自动选择, 手动选择, 中继选择, 落地选择, 香港节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 英国节点, 法国节点, 德国节点, 台湾节点], icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Apple.png}
-  - {name: 微软服务, type: select, proxies: [DIRECT, 节点选择, 自动选择, 手动选择, 中继选择, 落地选择, 香港节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 英国节点, 法国节点, 德国节点, 台湾节点], icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Microsoft.png}
   - {name: 国外媒体, type: select, proxies: [节点选择, 自动选择, 手动选择, 中继选择, 落地选择, 香港节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 英国节点, 法国节点, 德国节点, 台湾节点], icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Streaming.png}
 
   # 自动选择 - 按地区
@@ -280,7 +279,7 @@ rules:
   - RULE-SET,microsoft_cdn_non_ip,DIRECT
   - RULE-SET,apple_cn_non_ip,DIRECT
   - RULE-SET,apple_services,苹果服务
-  - RULE-SET,microsoft_non_ip,微软服务
+  - RULE-SET,microsoft_non_ip,节点选择
   - RULE-SET,ai_non_ip,人工智能
   - RULE-SET,global_non_ip,节点选择
   - RULE-SET,domestic_non_ip,DIRECT
@@ -288,7 +287,7 @@ rules:
   - RULE-SET,direct_non_ip,DIRECT
   - RULE-SET,lan_non_ip,DIRECT
 
-  ### 规则
+  ### 域名规则
   - DOMAIN-SUFFIX,0550.me,DIRECT #导航
   - DOMAIN-SUFFIX,0105.me,DIRECT #订阅
   - DOMAIN-SUFFIX,ch6vip.com,DIRECT #api
