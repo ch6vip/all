@@ -119,6 +119,7 @@ RuleSet_classical: &RuleSet_classical {type: http, behavior: classical, interval
 RuleSet_domain: &RuleSet_domain {type: http, behavior: domain, interval: 43200, format: text, proxy: 节点选择}
 RuleSet_ipcidr: &RuleSet_ipcidr {type: http, behavior: ipcidr, interval: 43200, format: text, proxy: 节点选择}
 RuleSet_filter: &RuleSet_filter {type: http, behavior: domain, interval: 43200, format: mrs, proxy: 节点选择}
+RuleSet_ads: &RuleSet_ads {type: http, behavior: domain, interval: 43200, format: yaml, proxy: 节点选择}
 
 # 订阅规则
 rule-providers:
@@ -264,6 +265,11 @@ rule-providers:
     url: https://testingcf.jsdelivr.net/gh/Seameee/override-hub@refs/heads/main/mergecnip/china_ip.txt
     path: ./rule_set/other_ruleset/china_ip.txt
 
+  秋风广告规则:
+    <<: *RuleSet_ads
+    path: ./rule_set/other_ruleset/AWAvenue-Ads-Rule-Clash.yaml
+    url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main//Filters/AWAvenue-Ads-Rule-Clash.yaml"
+
 # 分流规则
 rules:
   ### 非 IP 类规则
@@ -299,4 +305,5 @@ rules:
   - RULE-SET,lan_ip,DIRECT,no-resolve
   - RULE-SET,domestic_ip,DIRECT
   - RULE-SET,china_ip,DIRECT
+  - RULE-SET,秋风广告规则,REJECT
   - MATCH,节点选择
