@@ -307,9 +307,11 @@ rules:
   - RULE-SET,cn,DIRECT
   - RULE-SET,direct_non_ip,DIRECT
   - RULE-SET,lan_non_ip,DIRECT
-  - DOMAIN,linux.do,DIRECT
-  - DOMAIN-SUFFIX,813.pp.ua,DIRECT
-  - DOMAIN-SUFFIX,0105.me,DIRECT
+
+  ### 规则
+  - DOMAIN-SUFFIX,0550.me,DIRECT #导航
+  - DOMAIN-SUFFIX,0105.me,DIRECT #订阅
+  - DOMAIN-SUFFIX,ch6vip.com,DIRECT #api
 
   ### IP 类规则
   - RULE-SET,reject_ip,REJECT
